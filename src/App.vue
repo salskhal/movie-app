@@ -21,7 +21,7 @@
 
 body{
   min-height: 100vh;
-  background: orange;
+  background: #06476B;
   font-family: "Inter", sans-serif;
 }
 
