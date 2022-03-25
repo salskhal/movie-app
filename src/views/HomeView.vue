@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <h1 class="title">MOVIES</h1>
+    <h1 class="title">LASTEST MOVIES</h1>
     <div class="movie-card" >
       <div v-for="movie in movies" :key="movie.id" class="movies">
         <router-link :to="{ name: 'Detailed', params: { id: movie.id } }" :id="movie.id">
@@ -13,7 +13,6 @@
           <h4>{{ movie.original_title }}</h4>
           <p class="rating">{{ movie.vote_average }}</p>
           </div>
-
         </router-link>
       </div>
     </div>
@@ -56,6 +55,7 @@ export default {
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
   padding-inline: 50px;
+  padding-bottom: 20px;
 }
 
 .movie-card a{
@@ -72,6 +72,12 @@ export default {
 @media screen and (max-width: 700px) {
   .movie-card {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .movie-card {
+    grid-template-columns: 1fr;
   }
 }
 

@@ -1,12 +1,9 @@
 <template>
   <nav>
-    <router-link to="/" class="logo">SalsMovie</router-link>
-    <div class="movie-search">
-      <input type="text" />
-      <button>Search</button>
-    </div>
+    <router-link to="/" class="logo">SalsMovies</router-link>
   </nav>
   <router-view />
+  <footer>👨🏿‍💻 with ❤️ by <a href="https://github.com/salskhal" target="blank">@salskhal</a></footer>
 </template>
 
 <style>
@@ -33,36 +30,22 @@ nav{
 
 .logo{
   text-decoration: none;
-  color: white;
+  color: #022f47;
   font-weight: bold;
   text-transform: uppercase;
-  font-size: 2rem;
+  font-size: 1.3rem;
   transition: all .25s ease-in-out;
 }
-
-.logo:hover{
-  color: rgb(230, 221, 221);
-}
-
-
-/* #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+footer{
+  font-size: 20px;
+  color: white;
+  padding: 10px;
   text-align: center;
-  color: #2c3e50;
-} */
-
-/* nav {
-  padding: 30px;
+  margin-top: auto;
 }
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
+footer a{
+  color: white;
+  text-decoration: underline;
 }
-
-nav a.router-link-exact-active {
-  color: #42b983;
-} */
 </style>

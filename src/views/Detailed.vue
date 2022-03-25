@@ -1,6 +1,8 @@
 <template>
-<div v-if="movie">
-  <h1>Detailed {{ id }}</h1>
+<div v-if="movie" class="container">
+  <img :src="imagePath + movie.backdrop_path" alt="" class="movie-image">
+  <h2>{{movie.title}}</h2>
+  <p>{{movie.overview}}</p>
 </div>
 </template>
 
@@ -11,7 +13,8 @@ export default {
         return{
             movie: null,
             // id: 823625,
-            apikey: "7dd2f6061023c47cd5775913d9e60359"
+            apikey: "7dd2f6061023c47cd5775913d9e60359",
+            imagePath: "https://image.tmdb.org/t/p/original"
         }
     },
     mounted(){
@@ -27,5 +30,15 @@ export default {
 </script>
 
 <style>
+
+.container{
+    width: 80%;
+    margin-inline: auto;
+    text-align: center;
+}
+
+.movie-image{
+    width: 100%;
+}
 
 </style>
